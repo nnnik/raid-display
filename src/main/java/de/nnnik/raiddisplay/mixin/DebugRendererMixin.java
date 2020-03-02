@@ -1,5 +1,5 @@
-package de.nnnik.raiddebugmod.mixin;
-import com.mojang.blaze3d.systems.RenderSystem;
+package de.nnnik.raiddisplay.mixin;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,7 +18,6 @@ public class DebugRendererMixin {
 	
 	@Inject(at = @At("RETURN"), method = "render")
 	public void render(MatrixStack matrices, VertexConsumerProvider.Immediate vertexConsumers, double cameraX, double cameraY, double cameraZ, CallbackInfo ci) {
-		RenderSystem.enableDepthTest();
 		this.raidCenterDebugRenderer.render(matrices, vertexConsumers, cameraX, cameraY, cameraZ);
 	}
 }

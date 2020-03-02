@@ -1,4 +1,4 @@
-package de.nnnik.raiddebugmod.mixin;
+package de.nnnik.raiddisplay.mixin;
 
 import io.netty.buffer.Unpooled;
 import java.util.Collection;

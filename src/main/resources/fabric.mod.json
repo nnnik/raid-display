@@ -1,17 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "raid-debug-mod",
+  "id": "raid-display",
   "version": "${version}",
 
-  "name": "Raid Debug Mod",
+  "name": "Raid Display",
   "description": "Displays additional info about raids",
   "authors": [
     "nnnik"
   ],
   "contact": {
   },
-
-  "license": "CC0-1.0",
 
   "environment": "*",
   "entrypoints": {
@@ -27,8 +25,5 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "minecraft": "1.15.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }

@@ -1,13 +1,14 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "de.nnnik.raiddebugmod.mixin",
+  "package": "de.nnnik.raiddisplay.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   	"DebugRendererInfoManagerMixin"
   ],
   "client": [
-  	"DebugRendererMixin"
+  	"DebugRendererMixin",
+  	"RaidCenterDebugRendererMixin"
   ],
   "server": [
   ],
