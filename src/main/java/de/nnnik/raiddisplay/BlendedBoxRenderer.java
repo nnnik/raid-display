@@ -11,11 +11,11 @@ public enum BlendedBoxRenderer {
 		@Override
 		public void drawVertexes(BufferBuilder buffer) {
 			buffer.vertex(x1, y1, z1).color(r, g, b, a).next();
-			buffer.vertex(x2, y1, z1).color(r, g, b, a).next();
 			buffer.vertex(x1, y1, z2).color(r, g, b, a).next();
+			buffer.vertex(x2, y1, z1).color(r, g, b, a).next();
 			buffer.vertex(x2, y1, z2).color(r, g, b, a).next();
-			buffer.vertex(x1, y1, z2).color(r, g, b, a).next();
 			buffer.vertex(x2, y1, z1).color(r, g, b, a).next();
+			buffer.vertex(x1, y1, z2).color(r, g, b, a).next();
 		}
 	},
 	BOTTOM {
@@ -33,8 +33,8 @@ public enum BlendedBoxRenderer {
 		@Override
 		public void drawVertexes(BufferBuilder buffer) {
 			buffer.vertex(x2, y1, z1).color(r, g, b, a).next();
-			buffer.vertex(x2, y2, z1).color(r, g, b, a).next();
 			buffer.vertex(x2, y1, z2).color(r, g, b, a).next();
+			buffer.vertex(x2, y2, z1).color(r, g, b, a).next();
 			buffer.vertex(x2, y1, z2).color(r, g, b, a).next();
 			buffer.vertex(x2, y2, z2).color(r, g, b, a).next();
 			buffer.vertex(x2, y2, z1).color(r, g, b, a).next();
@@ -47,8 +47,8 @@ public enum BlendedBoxRenderer {
 			buffer.vertex(x1, y2, z1).color(r, g, b, a).next();
 			buffer.vertex(x1, y1, z2).color(r, g, b, a).next();
 			buffer.vertex(x1, y1, z2).color(r, g, b, a).next();
-			buffer.vertex(x1, y2, z2).color(r, g, b, a).next();
 			buffer.vertex(x1, y2, z1).color(r, g, b, a).next();
+			buffer.vertex(x1, y2, z2).color(r, g, b, a).next();
 		}
 	},
 	FRONT {
@@ -66,11 +66,11 @@ public enum BlendedBoxRenderer {
 		@Override
 		public void drawVertexes(BufferBuilder buffer) {
 			buffer.vertex(x1, y1, z2).color(r, g, b, a).next();
-			buffer.vertex(x2, y1, z2).color(r, g, b, a).next();
 			buffer.vertex(x1, y2, z2).color(r, g, b, a).next();
 			buffer.vertex(x2, y1, z2).color(r, g, b, a).next();
+			buffer.vertex(x2, y1, z2).color(r, g, b, a).next();
+			buffer.vertex(x1, y2, z2).color(r, g, b, a).next();
 			buffer.vertex(x2, y2, z2).color(r, g, b, a).next();
-			buffer.vertex(x1, y2, z2).color(r, g, b, a).next();
 		}
 	};
 	

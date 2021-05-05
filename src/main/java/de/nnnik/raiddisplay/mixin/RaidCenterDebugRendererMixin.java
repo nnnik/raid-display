@@ -33,6 +33,8 @@ public class RaidCenterDebugRendererMixin {
 	
 	@Inject(at = @At("HEAD"), method = "render", cancellable = true)
 	public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, double cameraX, double cameraY, double cameraZ, CallbackInfo ci) { 
+		RenderSystem.disableRescaleNormal();
+		RenderSystem.disableLighting();
 		RenderSystem.enableDepthTest();
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.shadeModel(7425);
@@ -45,6 +47,7 @@ public class RaidCenterDebugRendererMixin {
 			}
 		}
 		RenderSystem.shadeModel(7424);
+		RenderSystem.enableLighting();
 		RenderSystem.disableBlend();
 		ci.cancel();
 	}
@@ -58,6 +61,7 @@ public class RaidCenterDebugRendererMixin {
 		drawString("Raid center "+atBlock.toShortString(), atBlock, -65536);
 	}
 	
+	@SuppressWarnings("unused")
 	private static void drawString(String string, BlockPos atBlock, int i) {
 		double d = (double)atBlock.getX() + 0.5D;
 		double e = (double)atBlock.getY() + 1.3D;
