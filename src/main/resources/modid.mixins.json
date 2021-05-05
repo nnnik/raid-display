@@ -4,7 +4,7 @@
   "package": "de.nnnik.raiddisplay.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-  	"DebugRendererInfoManagerMixin"
+    "DebugInfoSenderMixin"
   ],
   "client": [
   	"DebugRendererMixin",
